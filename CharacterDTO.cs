@@ -7,4 +7,8 @@ public class CharacterDTO
   {
     return $"Id: {Id}\nName: {Name}\nSeries: {string.Join(", ", Series)}\n";
   }
+  public string DisplayNameAndSeries()
+    {
+        return $"Name: {Name}\nSeries: {string.Join(", ", Series)}\n";
+    }
 }

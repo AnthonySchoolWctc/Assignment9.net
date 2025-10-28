@@ -1,4 +1,4 @@
-﻿﻿using System.Text.Json;
+﻿using System.Text.Json;
 
 // deserialize mario json from file into List<Mario>
 List<Character> dks = JsonSerializer.Deserialize<List<Character>>(File.ReadAllText("dk.json"))!;
@@ -120,6 +120,10 @@ Console.Clear();
 
 // 1b: List the character(s) created in that 1981 (all series) - return character name and series only.
 
+foreach(CharacterDTO characterDTO in characters.Where(c => c.YearCreated == 1981).Select(c => new CharacterDTO{ Id = c.Id, Name = c.Name, Series = c.Series }).OrderBy(c => c.Name))
+{
+  Console.WriteLine(characterDTO.DisplayNameAndSeries());
+}
 
 
 // 1c: How many character(s) were created in 1981 (Mario series)?
@@ -155,33 +159,33 @@ Console.Clear();
 
 
 // 2a: How many character(s) made their first appearance in Donkey Kong 64?
-// 2b:List the character(s) that made their first appearance in Donkey Kong 64 - return character name only.
+// 2b: List the character(s) that made their first appearance in Donkey Kong 64 - return character name only.
 
-// 3a: Are there any character(s) with no alias (all series)?
-
-// 3b: How many character(s) with no alias (all series)?
+// 3a: Are there any character(s) with no alias (all series)
+// 3b:how many character(s) with no alias (all series)
 // 3c: List the character(s) with no alias (all series) - return character name, alias and series only.
-// 3d: Are there any character(s) with no alias (Mario series)?
-// 3e: How many character(s) with no alias (Mario series)?
+// 3d: Are there any character(s) with no alias (Mario series)
+// 3e: How many character(s) with no alias (Mario series)
 // 3f: List the character(s) with no alias (Mario series) - return character name and alias only.
-// 3g: Are there any character(s) with no alias (Donkey Kong series)?
-// 3h: How many character(s) with no alias (Donkey Kong series)?
+// 3g: Are there any character(s) with no alias (Donkey Kong series)
+// 3h: How many character(s) with no alias (Donkey Kong series)
 // 3i: List the character(s) with no alias (Donkey Kong series) - return character name and alias only.
 
 // 4a: Do any character(s) have an alias of Snowmad King (return type must be boolean)?
 // 4b: List the character(s) that have an alias of Snowmad King - return character name and alias only.
 
-// 5a: Do any character(s) that have an alias of Winter Kong (return type must be boolean)?
+// 5a: Do any character(s) that have an alias of Winter Kong (return type must be boolean)
 // 5b: List the character(s) that have an alias of Winter Kong - return character name and alias only.
 
 // 6a: How many character(s) have a species of Kremling?
 // 6b: List the character(s) that have a species of Kremling - return character name only.
 
-// 7a: How many character(s) in the Mario series are Human species?
+// 7a: How many character(s) in the Mario series are Human species
 // 7b: List the character(s) in the Mario series that are Human species - return character name only.
 // 7c: How many character(s) in the Mario series are Koopa species?
 // 7d: List the character(s) in the Mario series that are Koopa species - return character name only.
-// 7e: How many character(s) in the Mario series are something other than Human or Koopa species?
+// 7e: How many character(s) in the Mario series are something other than Human or Koopa species
 // 7f: List the character(s) in the Mario series that are something other than Human or Koopa species - return character name and species only.
 
-// 8a: List the character(s) in the Donkey Kong series that are something other than Human or Kong species - return character name and species only?
+// 8a: List the character(s) in the Donkey Kong series that are something other than Human or Kong species - return character name and species only
+
