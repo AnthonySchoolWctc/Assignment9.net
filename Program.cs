@@ -275,13 +275,13 @@ Console.Clear();
 
 // 7d: List the character(s) in the Mario series that are Koopa species - return character name only.
 
-foreach (String? name in characters.Where(c => c.Species.Contains("Koopa") && c.Series.Contains("Mario")).Select(c => c.Name))
-{
-      Console.WriteLine($"\t{name}");
-}
+//foreach (String? name in characters.Where(c => c.Species.Contains("Koopa") && c.Series.Contains("Mario")).Select(c => c.Name))
+//{
+   //   Console.WriteLine($"\t{name}");
+//}
 
 // 7e: How many character(s) in the Mario series are something other than Human or Koopa species
-
+Console.WriteLine($"How many? {characters.Count(c => !c.Species.Contains("Koopa") && !c.Species.Contains("Human") && c.Series.Contains("Mario"))}");
 // 7f: List the character(s) in the Mario series that are something other than Human or Koopa species - return character name and species only.
 
 
