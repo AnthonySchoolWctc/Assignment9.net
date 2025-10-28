@@ -176,14 +176,17 @@ Console.Clear();
 // }
 
 
+//Question 3:
 
 // 3a: Are there any character(s) with no alias (all series)
-foreach(var obj in characters.Where(c => c.Alias.Count() == 0).Select(c => new {c.Name, c.Alias})){
-  Console.WriteLine($"{obj.Name} has {obj.Alias.Count()} alias(s):\n\t{String.Join(", ", obj.Alias)}");
- }
+ bool CharacterNoAlias = characters.Any(c => c.Alias.Count() == 0);
+ Console.WriteLine($"Are there characters with no alias: {CharacterNoAlias}");
 
 // 3b:how many character(s) with no alias (all series)
 // 3c: List the character(s) with no alias (all series) - return character name, alias and series only.
+//foreach(var obj in characters.Where(c => c.Alias.Count() == 0).Select(c => new {c.Name, c.Alias})){
+//  Console.WriteLine($"{obj.Name} has {obj.Alias.Count()} alias(s):\n\t{String.Join(", ", obj.Alias)}");
+// }
 // 3d: Are there any character(s) with no alias (Mario series)
 // 3e: How many character(s) with no alias (Mario series)
 // 3f: List the character(s) with no alias (Mario series) - return character name and alias only.
