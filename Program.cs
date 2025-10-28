@@ -264,11 +264,14 @@ Console.Clear();
 //Console.WriteLine($"How many? {characters.Count(c => c.Species.Contains("Human") && c.Series.Contains("Mario"))}");
 
 // 7b: List the character(s) in the Mario series that are Human species - return character name only.
-foreach(String? name in characters.Where(c => c.Species.Contains("Human")&& c.Series.Contains("Mario")).Select(c => c.Name))
-{
-   Console.WriteLine($"\t{name}");
-}
+
+//foreach(String? name in characters.Where(c => c.Species.Contains("Human")&& c.Series.Contains("Mario")).Select(c => c.Name))
+//{
+//   Console.WriteLine($"\t{name}");
+//}
 // 7c: How many character(s) in the Mario series are Koopa species?
+
+Console.WriteLine($"How many? {characters.Count(c => c.Species.Contains("Koopa") && c.Series.Contains("Mario"))}");
 
 // 7d: List the character(s) in the Mario series that are Koopa species - return character name only.
 
