@@ -179,8 +179,8 @@ Console.Clear();
 //Question 3:
 
 // 3a: Are there any character(s) with no alias (all series)
- //bool CharacterNoAlias = characters.Any(c => c.Alias.Count() == 0);
- //Console.WriteLine($"Are there characters with no alias: {CharacterNoAlias}");
+//bool CharacterNoAlias = characters.Any(c => c.Alias.Count() == 0);
+//Console.WriteLine($"Are there characters with no alias: {CharacterNoAlias}");
 
 // 3b:how many character(s) with no alias (all series)
 //Console.WriteLine($"How many? {characters.Count(c => c.Alias.Count() == 0)}");
@@ -208,9 +208,15 @@ Console.Clear();
 // }
 
 // 3g: Are there any character(s) with no alias (Donkey Kong series)
-bool CharacterNoAlias = characters.Any(c => c.Alias.Count() == 0 && c.Series.Contains("Donkey Kong"));
- Console.WriteLine($"Are there characters with no alias: {CharacterNoAlias}");
+
+//bool CharacterNoAlias = characters.Any(c => c.Alias.Count() == 0 && c.Series.Contains("Donkey Kong"));
+
+// Console.WriteLine($"Are there characters with no alias: {CharacterNoAlias}");
+
 // 3h: How many character(s) with no alias (Donkey Kong series)
+
+Console.WriteLine($"How many? {characters.Count(c => c.Alias.Count() == 0 && c.Series.Contains("Donkey Kong"))}");
+
 // 3i: List the character(s) with no alias (Donkey Kong series) - return character name and alias only.
 
 // 4a: Do any character(s) have an alias of Snowmad King (return type must be boolean)?
