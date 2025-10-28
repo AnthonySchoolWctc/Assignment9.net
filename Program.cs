@@ -215,9 +215,13 @@ Console.Clear();
 
 // 3h: How many character(s) with no alias (Donkey Kong series)
 
-Console.WriteLine($"How many? {characters.Count(c => c.Alias.Count() == 0 && c.Series.Contains("Donkey Kong"))}");
+// Console.WriteLine($"How many? {characters.Count(c => c.Alias.Count() == 0 && c.Series.Contains("Donkey Kong"))}");
 
 // 3i: List the character(s) with no alias (Donkey Kong series) - return character name and alias only.
+
+//foreach(CharacterDTO characterDTO  in characters.Where(c => c.Alias.Count() == 0 && c.Series.Contains("Donkey Kong")).Select(c => new CharacterDTO{Id = c.Id, Name = c.Name, Series = c.Series})){
+//  Console.WriteLine(characterDTO.DisplayNameAndAlias());
+// }
 
 // 4a: Do any character(s) have an alias of Snowmad King (return type must be boolean)?
 // 4b: List the character(s) that have an alias of Snowmad King - return character name and alias only.
