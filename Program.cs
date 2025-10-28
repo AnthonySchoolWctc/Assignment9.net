@@ -178,6 +178,10 @@ Console.Clear();
 
 
 // 3a: Are there any character(s) with no alias (all series)
+foreach(var obj in characters.Where(c => c.Alias.Count() == 0).Select(c => new {c.Name, c.Alias})){
+  Console.WriteLine($"{obj.Name} has {obj.Alias.Count()} alias(s):\n\t{String.Join(", ", obj.Alias)}");
+ }
+
 // 3b:how many character(s) with no alias (all series)
 // 3c: List the character(s) with no alias (all series) - return character name, alias and series only.
 // 3d: Are there any character(s) with no alias (Mario series)
