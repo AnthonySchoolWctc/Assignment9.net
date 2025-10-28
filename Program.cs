@@ -179,10 +179,14 @@ Console.Clear();
 //Question 3:
 
 // 3a: Are there any character(s) with no alias (all series)
- bool CharacterNoAlias = characters.Any(c => c.Alias.Count() == 0);
- Console.WriteLine($"Are there characters with no alias: {CharacterNoAlias}");
+ //bool CharacterNoAlias = characters.Any(c => c.Alias.Count() == 0);
+ //Console.WriteLine($"Are there characters with no alias: {CharacterNoAlias}");
 
 // 3b:how many character(s) with no alias (all series)
+Console.WriteLine($"How many? {characters.Count(c => c.Alias.Count() == 0)}");
+
+
+
 // 3c: List the character(s) with no alias (all series) - return character name, alias and series only.
 //foreach(var obj in characters.Where(c => c.Alias.Count() == 0).Select(c => new {c.Name, c.Alias})){
 //  Console.WriteLine($"{obj.Name} has {obj.Alias.Count()} alias(s):\n\t{String.Join(", ", obj.Alias)}");
