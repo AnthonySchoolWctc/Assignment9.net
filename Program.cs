@@ -242,10 +242,16 @@ Console.Clear();
 
 
 // 5b: List the character(s) that have an alias of Winter Kong - return character name and alias only.
-foreach(CharacterDTO characterDTO  in characters.Where(c => c.Alias.Contains("Winter Kong")).Select(c => new CharacterDTO{Id = c.Id, Name = c.Name, Alias = c.Alias})){
-  Console.WriteLine(characterDTO.DisplayNameAndAlias());
-}
+//foreach(CharacterDTO characterDTO  in characters.Where(c => c.Alias.Contains("Winter Kong")).Select(c => new CharacterDTO{Id = c.Id, Name = c.Name, Alias = c.Alias})){
+//  Console.WriteLine(characterDTO.DisplayNameAndAlias());
+//}
+
+
+
 // 6a: How many character(s) have a species of Kremling?
+
+Console.WriteLine($"How many? {characters.Count(c => c.Species.Contains("Kremling"))}");
+
 // 6b: List the character(s) that have a species of Kremling - return character name only.
 
 // 7a: How many character(s) in the Mario series are Human species
