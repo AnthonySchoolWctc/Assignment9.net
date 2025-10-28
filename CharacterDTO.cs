@@ -14,7 +14,11 @@ public class CharacterDTO
   }
   public string DisplayNameAndSeriesAndAlias()
   {
-    return $"Name: {Name}\nSeries: {string.Join(", ", Series)}\nAlias's: {string.Join(", ", Alias)}";
+    return $"Name: {Name}\nSeries: {string.Join(", ", Series)}\nAlias's: {string.Join(", ", Alias)}\n";
+  }
+  public string DisplayNameAndAlias()
+  {
+    return $"Name: {Name}\nAlias's: {string.Join(", ", Alias)}\n";
   }
   
 }

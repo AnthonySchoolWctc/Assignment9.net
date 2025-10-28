@@ -203,6 +203,10 @@ Console.Clear();
 
 
 // 3f: List the character(s) with no alias (Mario series) - return character name and alias only.
+//foreach(CharacterDTO characterDTO  in characters.Where(c => c.Alias.Count() == 0 && c.Series.Contains("Mario")).Select(c => new CharacterDTO{Id = c.Id, Name = c.Name, Series = c.Series})){
+//  Console.WriteLine(characterDTO.DisplayNameAndAlias());
+// }
+
 // 3g: Are there any character(s) with no alias (Donkey Kong series)
 // 3h: How many character(s) with no alias (Donkey Kong series)
 // 3i: List the character(s) with no alias (Donkey Kong series) - return character name and alias only.
