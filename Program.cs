@@ -188,14 +188,14 @@ Console.Clear();
 
 
 // 3c: List the character(s) with no alias (all series) - return character name, alias and series only.
-foreach(CharacterDTO characterDTO  in characters.Where(c => c.Alias.Count() == 0).Select(c => new CharacterDTO{Id = c.Id, Name = c.Name, Series = c.Series})){
-  Console.WriteLine(characterDTO.DisplayNameAndSeriesAndAlias());
- }
+//foreach(CharacterDTO characterDTO  in characters.Where(c => c.Alias.Count() == 0).Select(c => new CharacterDTO{Id = c.Id, Name = c.Name, Series = c.Series})){
+//  Console.WriteLine(characterDTO.DisplayNameAndSeriesAndAlias());
+// }
 
 
 // 3d: Are there any character(s) with no alias (Mario series)
-//bool CharacterNoAlias = characters.Any(c => c.Alias.Count() == 0 && c.Series.Contains("Mario"));
-// Console.WriteLine($"Are there characters with no alias: {CharacterNoAlias}");
+bool CharacterNoAlias = characters.Any(c => c.Alias.Count() == 0 && c.Series.Contains("Mario"));
+ Console.WriteLine($"Are there characters with no alias: {CharacterNoAlias}");
 
 
 // 3e: How many character(s) with no alias (Mario series)
