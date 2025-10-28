@@ -151,6 +151,10 @@ Console.Clear();
 
 // 1f: List the character(s) created in that 1981 (Donkey Kong series) - return character name only.
 
+//foreach(CharacterDTO characterDTO in characters.Where(c => c.YearCreated == 1981 && c.Series.Contains("Donkey Kong")).Select(c => new CharacterDTO{ Id = c.Id, Name = c.Name, Series = c.Series }).OrderBy(c => c.Name))
+//{
+//  Console.WriteLine(characterDTO.DisplayNameAndSeries());
+//}
 
 
 
