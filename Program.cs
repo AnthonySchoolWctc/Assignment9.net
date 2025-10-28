@@ -254,12 +254,15 @@ Console.Clear();
 
 // 6b: List the character(s) that have a species of Kremling - return character name only.
 
-foreach(String? name in characters.Where(c => c.Species.Contains("Kremling")).Select(c => c.Name))
- {
-   Console.WriteLine($"\t{name}");
- }
+//foreach(String? name in characters.Where(c => c.Species.Contains("Kremling")).Select(c => c.Name))
+// {
+//   Console.WriteLine($"\t{name}");
+// }
 
 // 7a: How many character(s) in the Mario series are Human species
+
+Console.WriteLine($"How many? {characters.Count(c => c.Species.Contains("Human") && c.Series.Contains("Mario"))}");
+
 // 7b: List the character(s) in the Mario series that are Human species - return character name only.
 // 7c: How many character(s) in the Mario series are Koopa species?
 // 7d: List the character(s) in the Mario series that are Koopa species - return character name only.
